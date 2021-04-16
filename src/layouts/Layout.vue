@@ -19,6 +19,19 @@
       </q-toolbar>
     </q-header>
 
+    <q-footer>
+      <q-tabs>
+        <q-route-tab
+          to="/"
+          icon="list"
+          label="Todo" />
+        <q-route-tab
+          to="/settings"
+          icon="settings"
+          label="Settings" />
+      </q-tabs>
+    </q-footer>
+
     <q-drawer
       v-model="leftDrawerOpen"
       show-if-above
@@ -27,7 +40,7 @@
     >
       <q-list>
         <q-item-label header class="text-grey-8">Navigation</q-item-label>
-        <q-item to="/" clickable>
+        <q-item to="/" exact clickable>
         <q-item-section avatar>
         <q-icon name="list" />
         </q-item-section>
@@ -36,7 +49,7 @@
         </q-item-section>
         </q-item>
 
-        <q-item to="/" clickable>
+        <q-item to="/settings" exact clickable>
           <q-item-section avatar>
             <q-icon name="settings" />
           </q-item-section>
