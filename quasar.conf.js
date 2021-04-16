@@ -91,6 +91,7 @@ module.exports = function (/* ctx */) {
       //
       components: [
         'QFooter',
+        'QCheckbox',
       ],
       // directives: [],
 
