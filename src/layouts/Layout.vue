@@ -25,7 +25,8 @@
           v-for="nav in navs"
           :to="nav.to"
           :icon="nav.icon"
-          :label="nav.label" />
+          :label="nav.label"
+          :key="nav.label"/>
       </q-tabs>
     </q-footer>
 
@@ -37,7 +38,7 @@
     >
       <q-list>
         <q-item-label header class="text-grey-8">Navigation</q-item-label>
-        <q-item v-for="nav in navs" :to="nav.to" exact clickable>
+        <q-item v-for="nav in navs" :key="nav.label" :to="nav.to" exact clickable>
         <q-item-section avatar>
         <q-icon :name="nav.icon" />
         </q-item-section>
